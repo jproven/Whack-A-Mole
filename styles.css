@@ -81,6 +81,24 @@ h2 {
   background-image: url("images/mole.webp");
 }
 
+/* === Restart button styling === */
+#restart-btn {
+    margin-top: 40px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #444;
+    color: #fdf6e3;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#restart-btn:hover {
+    background-color: #222;
+}
+
 /* === Responsive adjustments for smaller screens === */
 @media (max-width: 600px) {
   h1 {
