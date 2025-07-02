@@ -18,3 +18,11 @@
     background-image: url(images/mole.webp);
     background-size: cover;
 }
+
+.hit {
+    background-color: rgb(108, 255, 108);
+}
+
+.miss {
+    background-color: rgb(255, 80, 80);
+}
