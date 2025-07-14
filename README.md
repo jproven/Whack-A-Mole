@@ -30,11 +30,11 @@ Whack-a-Mole 🎯
 
 🛠️ Built With
 
---- HTML5: Structured the game layout.
+--- HTML5: structured the game layout.
 
---- CSS3: Designed a clean, responsive UI with grid layouts and custom styles.
+--- CSS3: designed a clean, responsive UI with grid layouts and custom styles.
 
---- JavaScript: Handled game logic, user interactions, and timers.
+--- JavaScript: handled game logic, user interactions, and timers.
 
 📂 Project Structure
 
