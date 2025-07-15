@@ -4,7 +4,7 @@
 
 ## 🎮 Demo
 
---- Play here: https://jproven.github.io/whack-a-mole/
+- Play here: https://jproven.github.io/whack-a-mole/
 
 ## 🕹️ How to Play
 
@@ -46,7 +46,7 @@
     └── images/
         └── mole.webp     # Mole image for the game
     
-##💡 Possible Improvements
+## 💡 Possible Improvements
 
 - Add difficulty levels (e.g., faster mole appearance for higher difficulty).
 
