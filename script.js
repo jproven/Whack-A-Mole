@@ -2,8 +2,11 @@
 const squares = document.querySelectorAll('.square')
 
 // Select the score and time display elements
-const timeLeftEl = document.getElementById('time-left')
-const scoreEl = document.getElementById('score')
+const timeLeft = document.getElementById('time-left')
+const score = document.getElementById('score')
+
+// Restart button logic
+const restartBtn = document.getElementById('restart-btn')
 
 // Game speed
 let currentSpeed = 800
@@ -12,7 +15,7 @@ const speedIncrease = 50
 
 // Initialize game state
 let result = 0
-let currentTime = parseInt(timeLeftEl.textContent, 10)
+let currentTime = parseInt(timeLeft.textContent, 10)
 let hitPosition = null
 
 // Timer references
@@ -43,7 +46,7 @@ squares.forEach(square => {
             console.log(currentSpeed)
             square.classList.add('hit')
             result++
-            scoreEl.textContent = result
+            score.textContent = result
             hitPosition = null
             
             // Adjust speed based on score
@@ -66,7 +69,7 @@ function moveMole() {
 // Function to handle the countdown timer
 function countDown() {
     currentTime--
-    timeLeftEl.textContent = currentTime
+    timeLeft.textContent = currentTime
 
     // End the game when time runs out
     if (currentTime === 0) {
@@ -75,6 +78,23 @@ function countDown() {
         alert(`Game over! Final score: ${result}`)
     }
 }
+
+restartBtn.addEventListener('click', () => {
+    // Reset game state
+    result = 0
+    currentTime = 60
+    score.textContent = result
+    timeLeft.textContent = currentTime
+
+    // Clear any existing timers
+    clearInterval(moleTimerId)
+    clearInterval(countDownTimerId)
+
+    // Start again
+    randomSquare()
+    moveMole()
+    countDownTimerId = setInterval(countDown, 1000)
+})
 
 // Start the game
 randomSquare()                       // Show first mole

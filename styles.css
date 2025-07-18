@@ -1,19 +1,82 @@
-.square {
-    width: 200px;
-    height: 200px;
-    border-style: solid;
-    border-color: black;
+/* === Reset default spacing and box model === */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+/* === General body styling === */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(180deg, #fdf6e3 0%, #e5decf 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+/* === Title styling === */
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #2e2e2e;
+}
+
+/* === Score and timer headers === */
+h2 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  color: #444;
+}
+
+/* === Game grid layout === */
 .grid {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    width: 618px;
-    height: 618px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  max-width: 600px;
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Keep it a perfect square */
+  margin-top: 20px;
 }
 
+/* === Status bar (score and timer) === */
+.status-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 600px;
+    width: 100%;
+    margin-top: 10px;
+    padding: 0 10px;
+}
+
+/* Score and timer styling */
+.status-item {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* === Each square of the grid === */
+.square {
+  border: 3px solid #333;
+  background-color: #d8d1c7;
+  border-radius: 15px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  transition: background 0.3s, transform 0.1s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  background-size: cover;
+  background-position: center;
+}
+
+/* === Scale effect when clicking a square === */
+.square:active {
+  transform: scale(0.95);
+}
+
+/* === Mole appears with background image === */
 .mole {
     background-image: url(images/mole.webp);
     background-size: cover;
@@ -25,4 +88,40 @@
 
 .miss {
     background-color: rgb(255, 80, 80);
+}
+=======
+  background-image: url("images/mole.webp");
+}
+
+/* === Restart button styling === */
+#restart-btn {
+    margin-top: 40px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #444;
+    color: #fdf6e3;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#restart-btn:hover {
+    background-color: #222;
+}
+
+/* === Responsive adjustments for smaller screens === */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .grid {
+    gap: 8px;
+  }
 }

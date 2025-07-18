@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Whack a mole!</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
-</head> 
+</head>
+
 <body>
 
     <h1>Whack a mole!</h1>
 
-    <h2>Your score:</h2>
-    <h2 id="score">0</h2>
+    <div class="status-bar">
+        <div class="status-item">
+            <strong>Your score:</strong> <span id="score">0</span>
+        </div>
+        <div class="status-item">
+            <strong>Seconds left:</strong> <span id="time-left">60</span>
+        </div>
+    </div>
 
-    <h2>Seconds left:</h2>
-    <h2 id="time-left">60</h2>
 
     <div class="grid">
         <div class="square" id="1"></div>
@@ -28,5 +34,7 @@
         <div class="square" id="8"></div>
         <div class="square" id="9"></div>
     </div>
+
+    <button id="restart-btn">Restart Game</button>
 
 </body>
