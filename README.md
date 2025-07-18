@@ -2,10 +2,6 @@
 
 - A fun and interactive Whack-a-Mole browser game built with HTML, CSS, and JavaScript. Test your reflexes by clicking on the mole as it randomly appears across a 3x3 grid — before time runs out!
 
-## 🎮 Demo
-
-- Play here: https://jproven.github.io/whack-a-mole/
-
 ## 🕹️ How to Play
 
 - A mole will randomly appear in one of the 9 squares.
